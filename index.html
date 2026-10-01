@@ -37,7 +37,7 @@
           <a class="button button-primary" href="#projects">Explore my work <span>↘</span></a>
           <a class="button button-quiet linkedin-home-button" href="https://www.linkedin.com/in/atul-singh-05a365440?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="Visit Atul Kumar's LinkedIn profile"><span class="linkedin-home-icon" aria-hidden="true"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt=""><i></i></span>LinkedIn <span class="linkedin-home-arrow">↗</span></a>
           <a class="button button-quiet resume-button" href="Atul Resume.pdf" download="Atul Resume.pdf" type="application/pdf" aria-label="Download Atul Kumar's resume as PDF"><span class="resume-home-icon" aria-hidden="true"><img src="https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/file-down.svg" alt=""><i></i></span>Download resume <span class="resume-home-arrow">↓</span></a>
-          <a class="button button-quiet ai-cert-button" href="AI Certificate.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open Atul Kumar's AI certificate"><span class="ai-cert-icon" aria-hidden="true"><img src="AI Certificate.jpeg" alt="AI certificate icon"><i></i></span>AI Certificate <span class="ai-cert-arrow">↗</span></a>
+          <a class="button button-quiet ai-cert-button" href="AI%20Certificate.jpeg" data-open-certificate aria-label="Open Atul Kumar's AI certificate"><span class="ai-cert-icon" aria-hidden="true"><img src="AI%20Certificate.jpeg" alt="AI certificate icon"><i></i></span>AI Certificate <span class="ai-cert-arrow">↗</span></a>
           <a class="button button-quiet github-home-button" href="https://github.com/atul9155124" target="_blank" rel="noopener noreferrer" aria-label="Visit Atul Kumar's GitHub profile"><span class="github-home-icon" aria-hidden="true"><img src="https://cdn.simpleicons.org/github/FFFFFF" alt=""><i></i></span>GitHub <span class="github-home-arrow">↗</span></a>
         </div>
         <div class="hero-meta"><span>BASED IN INDIA</span><span class="meta-line"></span><span>LEARNING • BUILDING • GROWING</span></div>
@@ -58,6 +58,16 @@
       </div>
       <a class="scroll-cue" href="#about"><span class="scroll-wheel"></span> SCROLL TO EXPLORE</a>
     </section>
+
+    <div class="certificate-modal" id="certificate-modal" aria-hidden="true">
+      <div class="certificate-modal-backdrop" data-close-certificate></div>
+      <div class="certificate-modal-card" role="dialog" aria-modal="true" aria-labelledby="certificate-title">
+        <button class="certificate-close" type="button" aria-label="Close certificate">×</button>
+        <p class="certificate-title" id="certificate-title">AI Certificate</p>
+        <img src="AI%20Certificate.jpeg" alt="Atul Kumar AI certificate" />
+        <a class="certificate-download" href="AI%20Certificate.jpeg" download="AI_Certificate.jpeg">Download certificate</a>
+      </div>
+    </div>
 
     <section class="about section-shell section-block" id="about">
       <div class="section-label"><span>01</span> ABOUT ME</div>

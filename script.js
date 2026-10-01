@@ -127,6 +127,42 @@ document.querySelectorAll(".section-block, .project-card, .stat-card, .skill-gro
   });
 })();
 
+const certificateModal = document.getElementById("certificate-modal");
+const certificateClose = document.querySelector(".certificate-close");
+const certificateTrigger = document.querySelector("[data-open-certificate]");
+
+function toggleCertificateModal(open) {
+  if (!certificateModal) return;
+  certificateModal.classList.toggle("is-open", open);
+  certificateModal.setAttribute("aria-hidden", String(!open));
+  document.body.style.overflow = open ? "hidden" : "";
+}
+
+if (certificateTrigger) {
+  certificateTrigger.addEventListener("click", event => {
+    event.preventDefault();
+    toggleCertificateModal(true);
+  });
+}
+
+if (certificateClose) {
+  certificateClose.addEventListener("click", () => toggleCertificateModal(false));
+}
+
+if (certificateModal) {
+  certificateModal.addEventListener("click", event => {
+    if (event.target.hasAttribute("data-close-certificate") || event.target === certificateModal) {
+      toggleCertificateModal(false);
+    }
+  });
+}
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && certificateModal && certificateModal.classList.contains("is-open")) {
+    toggleCertificateModal(false);
+  }
+});
+
 const assistantToggle = document.querySelector(".assistant-toggle");
 const assistantPanel = document.querySelector(".assistant-panel");
 const assistantClose = document.querySelector(".assistant-close");
