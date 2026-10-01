@@ -1,8 +1,26 @@
 .hero-actions{flex-wrap:wrap}
-.hero-socials{display:flex;gap:18px;margin-top:19px}
-.hero-socials a{font:600 10px var(--display);color:#aeb7ce;transition:color .2s,transform .2s}
-.hero-socials a:hover{color:var(--cyan);transform:translateY(-2px)}
-.hero-socials span{color:var(--cyan);margin-left:4px}
+.github-home-button,.linkedin-home-button{gap:10px;position:relative;isolation:isolate}
+.resume-button{gap:10px}
+.resume-home-icon{width:19px;height:19px;display:grid;place-items:center;position:relative;transform-style:preserve-3d;perspective:100px;animation:resume-home-float 4.2s ease-in-out infinite}
+.resume-home-icon img{width:16px;height:16px;position:relative;z-index:1;filter:brightness(0) invert(1) drop-shadow(0 2px 3px rgba(0,0,0,.4));transform:translateZ(6px)}
+.resume-home-icon i,.resume-home-icon:before{content:"";position:absolute;inset:0;border:1px solid rgba(121,242,227,.65);border-radius:50%;transform:rotateX(68deg);box-shadow:0 0 7px rgba(121,242,227,.22)}
+.resume-home-icon:before{inset:3px -2px;border-color:rgba(165,139,255,.65);transform:rotateY(68deg)}
+.resume-home-arrow{margin-left:auto;color:var(--cyan)}
+@keyframes resume-home-float{0%,100%{transform:translateY(0) rotateY(10deg)}50%{transform:translateY(-3px) rotateY(-10deg)}}
+.github-home-button:before,.linkedin-home-button:before{content:"";position:absolute;inset:-1px;border:1px solid rgba(121,242,227,.22);border-radius:5px;transform:translateZ(-8px) rotateX(10deg);transition:transform .35s,border-color .35s;z-index:-1}
+.github-home-button:hover:before,.linkedin-home-button:hover:before{border-color:rgba(121,242,227,.65);transform:translateZ(-12px) rotateX(0)}
+.github-home-icon,.linkedin-home-icon{width:19px;height:19px;display:grid;place-items:center;position:relative;transform-style:preserve-3d;perspective:100px;animation:github-home-float 3.8s ease-in-out infinite}
+.linkedin-home-icon{animation-name:linkedin-home-float;animation-delay:-1.4s}
+.github-home-icon img,.linkedin-home-icon img{width:16px;height:16px;position:relative;z-index:1;filter:drop-shadow(0 2px 3px rgba(0,0,0,.4));transform:translateZ(6px)}
+.linkedin-home-icon img{filter:brightness(0) saturate(100%) invert(34%) sepia(74%) saturate(1289%) hue-rotate(181deg) brightness(92%) contrast(99%) drop-shadow(0 2px 3px rgba(0,0,0,.4))}
+.github-home-icon i,.github-home-icon:before,.linkedin-home-icon i,.linkedin-home-icon:before{content:"";position:absolute;inset:0;border:1px solid rgba(121,242,227,.6);border-radius:50%;transform:rotateX(68deg);box-shadow:0 0 7px rgba(121,242,227,.2)}
+.github-home-icon:before{inset:3px -2px;border-color:rgba(165,139,255,.6);transform:rotateY(68deg)}
+.linkedin-home-icon i{border-color:rgba(10,102,194,.85);box-shadow:0 0 8px rgba(10,102,194,.42)}
+.linkedin-home-icon:before{inset:3px -2px;border-color:rgba(121,242,227,.62);transform:rotateY(68deg)}
+.github-home-arrow,.linkedin-home-arrow{margin-left:auto;color:var(--cyan)}
+@keyframes github-home-float{0%,100%{transform:translateY(0) rotateY(-12deg)}50%{transform:translateY(-3px) rotateY(12deg)}}
+.linkedin-home-arrow{color:#70b7ff}
+@keyframes linkedin-home-float{0%,100%{transform:translateY(-1px) rotateY(12deg)}50%{transform:translateY(-4px) rotateY(-12deg)}}
 .profile-depth{position:absolute;z-index:1;top:50%;left:50%;width:360px;height:360px;transform:translate(-50%,-50%);transform-style:preserve-3d;perspective:900px;pointer-events:none}
 .profile-depth:before,.profile-depth:after{content:"";position:absolute;top:50%;left:50%;width:330px;height:190px;border:1px solid rgba(121,242,227,.38);border-radius:50%;transform-style:preserve-3d;filter:drop-shadow(0 0 8px rgba(121,242,227,.2))}
 .profile-depth:before{animation:profile-orbit-a 13s linear infinite}
@@ -68,3 +86,11 @@
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:640px){.hero-visual{overflow:clip}.profile-depth{width:290px;height:310px}.profile-depth:before{width:270px;height:160px}.profile-depth:after{width:230px;height:190px}.profile-depth span{width:100px;height:100px}.hero-socials{margin-top:16px}.contact-board a{padding:12px 10px;grid-template-columns:36px minmax(0,1fr) auto;gap:0 9px}.contact-icon{width:34px;height:34px}.contact-icon img{width:19px;height:19px}.contact-board strong{font-size:11px}.portfolio-assistant{right:12px;bottom:12px}.assistant-panel{height:min(390px,65vh)}.assistant-form{gap:6px;padding:10px}.assistant-form button{flex-basis:36px;width:36px;height:38px}.assistant-form input{padding:9px 8px;font-size:11px}}
 @media(prefers-reduced-motion:reduce){.profile-depth:before,.profile-depth:after,.profile-depth span,.contact-icon img,.assistant-mic.is-listening,.skill-token,.skill-logo,.assistant-bot{animation:none!important}.assistant-panel{animation:none}}
+
+@media(prefers-reduced-motion:reduce){.github-home-icon,.linkedin-home-icon,.resume-home-icon{animation:none}.github-home-button:before,.linkedin-home-button:before{transition:none}}
+
+.project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.project-number[href]{color:var(--cyan);transition:color .2s}
+.project-number[href]:hover{color:#fff}
+@media(max-width:850px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.project-grid{grid-template-columns:1fr}}

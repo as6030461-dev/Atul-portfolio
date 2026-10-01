@@ -154,7 +154,7 @@ function getPortfolioAnswer(question) {
     return "Atul lists C, C++, Java, Python, MATLAB, JavaScript, HTML, and CSS. His computer science subjects include data structures, operating systems, DBMS, and computer networks.";
   }
   if (/project|work|built|portfolio|student management/.test(query)) {
-    return "The portfolio features a personal portfolio website and an academic Student Management System concept, built to practice web development, programming, and data structures.";
+    return "Featured projects include Atul's personal portfolio, an academic Student Management System concept, and Nexora AI Web Builder, a live AI-powered tool for generating, editing, previewing, and publishing websites.";
   }
   if (/education|study|college|school|cgpa|grade/.test(query)) {
     return "Atul is a Computer Science Engineering diploma graduate with an 8.2 CGPA. He completed Class 10 at Dolphin Public School with 74%.";
@@ -166,7 +166,7 @@ function getPortfolioAnswer(question) {
     return "Email Atul at singhatul20095@gmail.com or message him on WhatsApp at +91 87072 10511 using the contact buttons below.";
   }
   if (/github|linkedin|social/.test(query)) {
-    return "GitHub and LinkedIn buttons are available near the top of the page. Atul's personal profile URLs have not been added yet, so those buttons currently open the platforms.";
+    return "Open Atul's GitHub or LinkedIn profile using the social buttons beside the resume download near the top of the page.";
   }
   if (/matlab/.test(query)) {
     return "MATLAB is a programming and numerical-computing environment used for matrix calculations, data analysis, visualization, and engineering simulations. Atul has also listed MATLAB among his skills.";
